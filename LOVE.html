@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOVE</title>
+</head>
+<body>
+<select id="language">
+    <option value="Chinese">中文(Chinese)</option><br>
+    <option value="English">英语(English)</option><br>
+    <option value="French">法语(French)</option><br>
+    <option value="Italian">意大利语(Italian)</option><br>
+    <option value="Spanish">西班牙语(Spanish)</option><br>
+</select><br>
+<p>测试能否输出</p>
+<button onclick="printLOVE()">确定</button>
+<button onclick="resetLanguage()">重置</button>
+<p id="demoLOVE"></p>
+
+<script>
+    function printLOVE() {
+        var s = document.getElementById("language").value;
+        var res;
+        switch (s) {
+            case "Chinese":
+                res = "我爱你";
+                break;
+            case "English":
+                res = "I Love you";
+                break;
+            case "French":
+                res = "Je t'aime";
+                break;
+            case "Italian":
+                res = "Ti amo";
+                break;
+            case "Spanish":
+                res = "Te amo";
+                break;
+        }
+        document.getElementById("demoLOVE").innerHTML = res;
+    }
+    function resetLanguage() {
+        document.getElementById("language").value="Chinese";
+        document.getElementById("demoLOVE").innerHTML = "";
+    }
+</script>
+</body>
+</html>
